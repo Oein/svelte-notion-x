@@ -24,22 +24,14 @@
   };
 </script>
 
-{#each block.rich_text as text}
+{#each block.rich_text as text, i}
   {#if text.type == "text"}
-    <span
-      class={`notion-rich-text`}
-      style={`${(() => {
-        if (text.annotations.color.includes("_background")) {
-          return `background-color: var(--notion-back-${text.annotations.color.replace("_background", "")});`;
-        }
-        return `color: var(--notion-fore-${text.annotations.color});`;
-      })()}`}
-    >
-      <HandleAnnotation
-        annotations={text.annotations}
-        text={text.text.content}
-      />
-    </span>
+    <HandleAnnotation
+      lastAnnotations={block.rich_text[i - 1]?.annotations}
+      nextAnnotations={block.rich_text[i + 1]?.annotations}
+      annotations={text.annotations}
+      text={text.text.content}
+    />
   {:else if text.type == "equation"}
     <MathML tex={text.equation.expression} />
   {:else}

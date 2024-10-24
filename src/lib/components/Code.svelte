@@ -15,7 +15,7 @@
 <pre
   bind:this={preElement}>{@html `<code>${block.code.rich_text[0].text.content}</code>`}</pre>
 
-<details>
+<!-- <details>
   <summary>RAW JSON: CODE</summary>
   <pre class="notion-debug">{JSON.stringify(block, null, 2)}</pre>
-</details>
+</details> -->

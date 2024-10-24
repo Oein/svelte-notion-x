@@ -1,4 +1,5 @@
 <script lang="ts">
+  import DebugJson from "./DebugJSON.svelte";
   import RenderText from "./RenderText.svelte";
 
   export let block: {
@@ -23,7 +24,4 @@
   </div>
 </div>
 
-<details>
-  <summary>RAW JSON: TODO</summary>
-  <pre class="notion-debug">{JSON.stringify(block, null, 2)}</pre>
-</details>
+<!-- <DebugJson {block} name="todo" /> -->

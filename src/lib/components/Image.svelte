@@ -1,4 +1,6 @@
 <script lang="ts">
+  import DebugJson from "./DebugJSON.svelte";
+
   export let block: {
     [key: string]: any;
   };
@@ -8,14 +10,25 @@
         ? url
         : `/image/${encodeURIComponent(url)}?table=block&id=${blockId}`
     }`;
+  const alt = (() => {
+    try {
+      return block.image.caption ? block.image.caption[0][0] : "";
+    } catch (e) {
+      return "";
+    }
+  })();
 </script>
 
 <img
+  class="notion-image"
   src={toNotionImageUrl(block.image.file.url, block.id)}
-  alt="image from notion"
+  alt="from notion"
 />
 
-<!-- <details>
-  <summary>RAW JSON: IMAGE</summary>
-  <pre class="notion-debug">{JSON.stringify(block, null, 2)}</pre>
-</details> -->
+<!-- <DebugJson {block} name="image" /> -->
+
+<style>
+  .notion-image {
+    width: 100%;
+  }
+</style>

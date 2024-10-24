@@ -1,29 +1,25 @@
 <script lang="ts">
-  export let annotations: {
-    bold: boolean;
-    italic: boolean;
-    strikethrough: boolean;
-    underline: boolean;
-    code: boolean;
-    color: string;
-  };
+  import type { Annotation } from "../../types/Annotations";
+  import HandleBold from "./HandleBold.svelte";
+  import HandleCode from "./HandleCode.svelte";
+  import HandleItalic from "./HandleItalic.svelte";
+  import HandleStrike from "./HandleStrike.svelte";
+  import HandleUnderline from "./HandleUnderline.svelte";
+
+  export let annotations: Annotation;
+  export let lastAnnotations: Annotation;
+  export let nextAnnotations: Annotation;
   export let text: string;
-
-  let tags: string[] = [];
-  let htmlTAGS: string = "";
-  let htmlENDER: string = "";
-
-  $: (() => {
-    tags = [];
-    if (annotations.bold) tags.push("b");
-    if (annotations.italic) tags.push("i");
-    if (annotations.strikethrough) tags.push("s");
-    if (annotations.underline) tags.push("u");
-    for (let tag of tags) {
-      htmlTAGS += `<${tag}>`;
-      htmlENDER = `</${tag}>` + htmlENDER;
-    }
-  })();
 </script>
 
-{@html htmlTAGS + text + htmlENDER}
+<HandleCode {annotations} {lastAnnotations} {nextAnnotations}>
+  <HandleBold {annotations}>
+    <HandleItalic {annotations}>
+      <HandleStrike {annotations}>
+        <HandleUnderline {annotations}>
+          {text}
+        </HandleUnderline>
+      </HandleStrike>
+    </HandleItalic>
+  </HandleBold>
+</HandleCode>

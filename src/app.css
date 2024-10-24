@@ -5,27 +5,6 @@ pre.notion-debug {
   font-size: 10px;
 }
 
-.notion-renderer {
-  font-size: var(--notion-default-font-size);
-  line-height: 1.5;
-
-  flex-shrink: 0;
-  flex-grow: 1;
-  max-width: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  width: 100%;
-  z-index: 4;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-
-  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont,
-    "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji",
-    Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
 .notion-heading-1 {
   font-weight: 600;
   font-size: 1.875em;
@@ -84,16 +63,6 @@ pre.notion-debug {
   caret-color: rgb(55, 53, 47);
 }
 
-.notion-equation-block {
-  display: flex;
-  padding: 4px 8px;
-  width: 100%;
-  flex-direction: column;
-  overflow: auto;
-  color: inherit;
-  fill: inherit;
-}
-
 :root {
   --notion-fore-default: rgba(55, 53, 47, 1);
   --notion-fore-gray: rgba(120, 119, 116, 1);
@@ -122,4 +91,7 @@ pre.notion-debug {
 * {
   box-sizing: border-box;
   outline: 0;
+
+  scrollbar-width: 15px;
+  scrollbar-color: #d3d1cb rgba(0, 0, 0, 0);
 }
