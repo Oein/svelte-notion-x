@@ -9,6 +9,7 @@
   import DebugJson from "./components/DebugJSON.svelte";
   import Divider from "./components/Divider.svelte";
   import Toggle from "./components/Toggle.svelte";
+  import Quote from "./components/Quote.svelte";
 
   export let block: {
     type: string;
@@ -47,6 +48,8 @@
     <Divider />
   {:else if block.type == "toggle"}
     <Toggle {block} />
+  {:else if block.type == "quote"}
+    <Quote {block} />
   {:else if block.type == "to_do"}
     {#if block.to_do}
       <Todo block={notypecheck(block)} />
