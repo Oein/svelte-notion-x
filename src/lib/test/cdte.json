@@ -1,0 +1,295 @@
+{
+  "page": {
+    "object": "page",
+    "id": "6e24882d-eaca-46e5-827d-ac01a4edd4be",
+    "created_time": "2024-06-17T11:49:00.000Z",
+    "last_edited_time": "2024-10-14T16:14:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "d0e26ba9-ae1e-40fe-af88-07edcf42bd76"
+    },
+    "archived": false,
+    "in_trash": false,
+    "properties": {
+      "date": {
+        "id": "NX%5CQ",
+        "type": "date",
+        "date": { "start": "2023-04-05", "end": null, "time_zone": null }
+      },
+      "thumbnail": { "id": "WxpT", "type": "files", "files": [] },
+      "type": {
+        "id": "%60gQ~",
+        "type": "select",
+        "select": {
+          "id": "5aff2f95-fd1e-489b-8840-bf10bc9519cb",
+          "name": "Post",
+          "color": "purple"
+        }
+      },
+      "slug": {
+        "id": "d%5Dhq",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": { "content": "bash-for-loop", "link": null },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "bash-for-loop",
+            "href": null
+          }
+        ]
+      },
+      "category": {
+        "id": "ppED",
+        "type": "select",
+        "select": {
+          "id": "cf14a391-be38-4281-84e9-c87391a17e75",
+          "name": "🗒️ Note",
+          "color": "default"
+        }
+      },
+      "tags": {
+        "id": "sD%5Em",
+        "type": "multi_select",
+        "multi_select": [
+          {
+            "id": "cb112452-361a-4174-a992-0423decf786c",
+            "name": "Note",
+            "color": "red"
+          }
+        ]
+      },
+      "summary": { "id": "wz%7CS", "type": "rich_text", "rich_text": [] },
+      "updatedAt": {
+        "id": "zyLz",
+        "type": "last_edited_time",
+        "last_edited_time": "2024-10-14T16:14:00.000Z"
+      },
+      "author": {
+        "id": "~rC%3D",
+        "type": "people",
+        "people": [
+          {
+            "object": "user",
+            "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9",
+            "name": "ein O",
+            "avatar_url": "https://lh3.googleusercontent.com/a-/AFdZucqbUSi6DyCO6-YVDcekb0xuOlt4LvdBnnpeg7gYpA=s100",
+            "type": "person",
+            "person": { "email": "oein0219@gmail.com" }
+          }
+        ]
+      },
+      "title": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "[코딩] Bash에서 모든 파일을 for-loop",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "[코딩] Bash에서 모든 파일을 for-loop",
+            "href": null
+          }
+        ]
+      },
+      "status": {
+        "id": "f211bdc0-ee00-4186-9a7d-f68c055ec2ee",
+        "type": "select",
+        "select": {
+          "id": "7abc61d4-b405-480d-b699-12588755fa65",
+          "name": "Public",
+          "color": "red"
+        }
+      }
+    },
+    "url": "https://www.notion.so/Bash-for-loop-6e24882deaca46e5827dac01a4edd4be",
+    "public_url": "https://oein.notion.site/Bash-for-loop-6e24882deaca46e5827dac01a4edd4be",
+    "request_id": "bdf09d00-0be2-4656-84c6-86f97f7e557e"
+  },
+  "blocks": [
+    {
+      "object": "block",
+      "id": "d58532d5-7f60-449d-9b3f-4b90d47c7cae",
+      "parent": {
+        "type": "page_id",
+        "page_id": "6e24882d-eaca-46e5-827d-ac01a4edd4be"
+      },
+      "created_time": "2024-06-17T11:50:00.000Z",
+      "last_edited_time": "2024-06-17T11:50:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "code",
+      "code": {
+        "caption": [],
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "for filename in [file selector];\ndo\n echo \"$filename\"\ndone",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "for filename in [file selector];\ndo\n echo \"$filename\"\ndone",
+            "href": null
+          }
+        ],
+        "language": "bash"
+      }
+    },
+    {
+      "object": "block",
+      "id": "d636621c-0d09-48c4-88cc-1544d2db46b4",
+      "parent": {
+        "type": "page_id",
+        "page_id": "6e24882d-eaca-46e5-827d-ac01a4edd4be"
+      },
+      "created_time": "2024-06-17T11:50:00.000Z",
+      "last_edited_time": "2024-06-17T11:51:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "요런식으로 파일들을 돌 수 있다. 실생활 예시를 들면 아래처럼 할 수 있다.",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "요런식으로 파일들을 돌 수 있다. 실생활 예시를 들면 아래처럼 할 수 있다.",
+            "href": null
+          }
+        ],
+        "color": "default"
+      }
+    },
+    {
+      "object": "block",
+      "id": "51e01f66-0544-4d2f-ad27-3389ecf6258a",
+      "parent": {
+        "type": "page_id",
+        "page_id": "6e24882d-eaca-46e5-827d-ac01a4edd4be"
+      },
+      "created_time": "2024-06-17T11:51:00.000Z",
+      "last_edited_time": "2024-06-17T11:51:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "code",
+      "code": {
+        "caption": [],
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "# ogg2wav\nfor filename in *.ogg;\ndo\n ffmpeg -i \"$filename\" -ac 1 -ar 44100 -acodec pcm_s16le \"./out/$filename.wav\"\ndone",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "# ogg2wav\nfor filename in *.ogg;\ndo\n ffmpeg -i \"$filename\" -ac 1 -ar 44100 -acodec pcm_s16le \"./out/$filename.wav\"\ndone",
+            "href": null
+          }
+        ],
+        "language": "bash"
+      }
+    },
+    {
+      "object": "block",
+      "id": "b83cdc31-6a2c-41c7-a1a3-f99a45b37679",
+      "parent": {
+        "type": "page_id",
+        "page_id": "6e24882d-eaca-46e5-827d-ac01a4edd4be"
+      },
+      "created_time": "2024-06-17T11:51:00.000Z",
+      "last_edited_time": "2024-06-17T11:51:00.000Z",
+      "created_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "last_edited_by": {
+        "object": "user",
+        "id": "c318fc38-48b2-470e-b8e8-65dcb77907b9"
+      },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": { "rich_text": [], "color": "default" }
+    }
+  ]
+}

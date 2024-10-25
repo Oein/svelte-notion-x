@@ -9,7 +9,7 @@
   };
 </script>
 
-{#if annotations.bold}
+{#if annotations.strikethrough}
   <s><slot /></s>
 {:else}
   <slot />

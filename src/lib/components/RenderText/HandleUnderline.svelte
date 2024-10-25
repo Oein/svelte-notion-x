@@ -9,7 +9,7 @@
   };
 </script>
 
-{#if annotations.bold}
+{#if annotations.underline}
   <u><slot /></u>
 {:else}
   <slot />

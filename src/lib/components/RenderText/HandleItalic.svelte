@@ -9,7 +9,7 @@
   };
 </script>
 
-{#if annotations.bold}
+{#if annotations.italic}
   <i><slot /></i>
 {:else}
   <slot />

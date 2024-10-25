@@ -8,6 +8,7 @@
   import EquationBlock from "./components/EquationBlock.svelte";
   import DebugJson from "./components/DebugJSON.svelte";
   import Divider from "./components/Divider.svelte";
+  import Toggle from "./components/Toggle.svelte";
 
   export let block: {
     type: string;
@@ -37,13 +38,15 @@
   {:else if block.type == "equation"}
     <EquationBlock block={block.equation} />
   {:else if block.type == "table"}
-    <Table {block} />
+    <Table block={notypecheck(block)} />
   {:else if block.type == "image"}
     <Image {block} />
   {:else if block.type == "code"}
     <Code {block} />
   {:else if block.type == "divider"}
     <Divider />
+  {:else if block.type == "toggle"}
+    <Toggle {block} />
   {:else if block.type == "to_do"}
     {#if block.to_do}
       <Todo block={notypecheck(block)} />
