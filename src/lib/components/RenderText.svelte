@@ -32,6 +32,16 @@
       annotations={text.annotations}
       text={text.text.content}
     />
+  {:else if text.type == "mention" && text.mention.type == "link_preview"}
+    <a href={text.href} class="notion-render notion-link">
+      <HandleAnnotation
+        lastAnnotations={block.rich_text[i - 1]?.annotations}
+        nextAnnotations={block.rich_text[i + 1]?.annotations}
+        annotations={text.annotations}
+        text={new URL(text.plain_text).hostname +
+          new URL(text.plain_text).pathname}
+      />
+    </a>
   {:else if text.type == "equation"}
     <MathML tex={text.equation.expression} />
   {:else}
@@ -39,7 +49,7 @@
   {/if}
 {/each}
 
-<!-- <details>
+<details>
   <summary>RAW JSON: RichText</summary>
   <pre class="notion-debug">{JSON.stringify(block, null, 2)}</pre>
-</details> -->
+</details>
