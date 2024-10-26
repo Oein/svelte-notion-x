@@ -9,15 +9,22 @@
     };
     children: any[];
   };
+
+  export let number: number = 1;
 </script>
+
+<!-- <li><RenderText block={block.numbered_list_item} /></li> -->
 
 <div class="notion-list">
   <div class="notion-list-dot">
-    <div class="notion-list-dot-inner"></div>
+    <div
+      class="notion-list-dot-inner"
+      style={`--pseudoBefore--content: "${number}.";`}
+    ></div>
   </div>
   <div class="notion-list-content">
     <div class="notion-list-text">
-      <RenderText block={block.bulleted_list_item} />
+      <RenderText block={block.numbered_list_item} />
     </div>
     {#if block.children}
       <Notion blocks={block.children} />
@@ -25,7 +32,7 @@
   </div>
 </div>
 
-<!-- <DebugJson {block} name="dot-list" /> -->
+<!-- <DebugJson {block} name="num-list" /> -->
 
 <style>
   .notion-list {
@@ -49,11 +56,11 @@
     min-height: calc(1.5em + 6px);
   }
   .notion-list-dot-inner {
-    font-size: 1.5em;
-    line-height: 1;
-    margin-bottom: 0px;
+    width: 24px;
+    text-align: center;
+    white-space: nowrap;
+
     --pseudoBefore--fontFamily: Arial;
-    --pseudoBefore--content: "•";
   }
   .notion-list-dot-inner:before {
     background: var(--pseudoBefore--background);
@@ -67,6 +74,7 @@
     height: var(--pseudoBefore--height);
     width: var(--pseudoBefore--width);
   }
+
   .notion-list-text {
     width: 100%;
     padding: 3px 0px;

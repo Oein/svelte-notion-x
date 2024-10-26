@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Notion from "../Notion.svelte";
   import NotionBlock from "../NotionBlock.svelte";
   import DebugJson from "./DebugJSON.svelte";
   import RenderText from "./RenderText.svelte";
@@ -43,9 +44,7 @@
       </div>
     {/if}
     {#if block.children}
-      {#each block.children as child}
-        <NotionBlock block={child} />
-      {/each}
+      <Notion blocks={block.children} />
     {/if}
   </div>
 </div>

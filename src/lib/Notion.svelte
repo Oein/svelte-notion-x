@@ -3,24 +3,32 @@
 
   import "highlight.js/styles/dark.min.css";
 
-  import blocksjson from "./test/blocks.json";
-  const blocks = blocksjson.blocks;
+  export let blocks: any[] = [];
 
-  import cdtejson from "./test/cdte.json";
-  const codeTest = cdtejson.blocks;
-
-  import chjson from "./test/chzzk.json";
-  const chzzk = chjson.blocks;
-
-  let selected = 0;
+  let renderData: any[] = [];
+  $: blocks &&
+    (() => {
+      renderData = blocks;
+      let propsWK: any = {};
+      for (let i = 0; i < renderData.length; i++) {
+        // console.log("PROP", propsWK, renderData[i]);
+        if (renderData[i].type === "numbered_list_item") {
+          if (propsWK.nli) {
+            renderData[i].custom = {};
+            renderData[i].custom.number = propsWK.nli + 1;
+            propsWK.nli++;
+          } else {
+            renderData[i].custom = {};
+            renderData[i].custom.number = 1;
+            propsWK.nli = 1;
+          }
+        } else propsWK.nli = 0;
+      }
+    })();
 </script>
 
-<button on:click={() => (selected = 0)}>Notion</button>
-<button on:click={() => (selected = 1)}>Code</button>
-<button on:click={() => (selected = 2)}>Chzzk</button>
-
 <article class="notion-renderer">
-  {#each selected == 0 ? blocks : selected == 1 ? codeTest : chzzk as block}
+  {#each renderData as block}
     <NotionBlock {block} />
   {/each}
 </article>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Notion from "../Notion.svelte";
   import NotionBlock from "../NotionBlock.svelte";
   import DebugJson from "./DebugJSON.svelte";
   import RenderText from "./RenderText.svelte";
@@ -25,9 +26,7 @@
   <div class="notion-toggle-content">
     <RenderText block={block.toggle} />
     {#if block.children && open}
-      {#each block.children as blc}
-        <NotionBlock block={blc} />
-      {/each}
+      <Notion blocks={block.children} />
     {/if}
   </div>
 </div>

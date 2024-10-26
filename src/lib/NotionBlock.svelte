@@ -11,6 +11,7 @@
   import Toggle from "./components/Toggle.svelte";
   import Quote from "./components/Quote.svelte";
   import Callout from "./components/Callout.svelte";
+  import NumList from "./components/NumList.svelte";
 
   export let block: {
     type: string;
@@ -59,6 +60,11 @@
     {/if}
   {:else if block.type == "bulleted_list_item"}
     <DotList block={notypecheck(block)} />
+  {:else if block.type == "numbered_list_item"}
+    <NumList
+      block={notypecheck(block)}
+      number={block.custom && block.custom.number ? block.custom.number : 1}
+    />
   {:else}
     <DebugJson {block} name={`Unhandled / ${block.type}`} />
   {/if}

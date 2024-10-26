@@ -8,7 +8,7 @@
 
 {#if annotations.code}
   <span
-    class={`notion-inline-code ${lastAnnotations?.code ? "notion-inline-code-keep" : ""} ${lastAnnotations?.code === false ? "notion-inline-code-start" : ""} ${!nextAnnotations?.code ? "notion-inline-code-end" : ""}`}
+    class={`notion-inline-code ${lastAnnotations?.code ? "notion-inline-code-keep" : ""} ${lastAnnotations?.code === false || !lastAnnotations ? "notion-inline-code-start" : ""} ${!nextAnnotations?.code ? "notion-inline-code-end" : ""}`}
   >
     <slot />
   </span>
@@ -38,10 +38,12 @@
     padding-right: 0px;
   }
   .notion-inline-code-start {
-    border-radius: 4px 0px 0px 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
   .notion-inline-code-end {
-    border-radius: 0px 4px 4px 0px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     padding-right: 0.4em;
   }
 </style>

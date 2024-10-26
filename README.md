@@ -20,11 +20,11 @@ render notion blocks on svelte
 | Image                  | ✅ Supported         |
 | Link Preview           | ❌                   |
 | Mention                | ❌                   |
-| Numbered list item     | ❌                   |
+| Numbered list item     | ✅ Supported         |
 | Paragraph              | ✅ Supported         |
 | PDF                    | ❌                   |
 | Quote                  | ✅ Supported         |
-| Synced block           | ❌                   |
+| Synced block           | ❌ NOT GONNA SUPPORT |
 | Table                  | ✅ Supported         |
 | Table of contents      | ❌                   |
 | To do                  | 🚧 WIP(UI)           |
