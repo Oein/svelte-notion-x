@@ -10,6 +10,7 @@
   import Divider from "./components/Divider.svelte";
   import Toggle from "./components/Toggle.svelte";
   import Quote from "./components/Quote.svelte";
+  import Callout from "./components/Callout.svelte";
 
   export let block: {
     type: string;
@@ -50,6 +51,8 @@
     <Toggle {block} />
   {:else if block.type == "quote"}
     <Quote {block} />
+  {:else if block.type == "callout"}
+    <Callout {block} />
   {:else if block.type == "to_do"}
     {#if block.to_do}
       <Todo block={notypecheck(block)} />
