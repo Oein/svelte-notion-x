@@ -15,15 +15,15 @@
 
 <!-- <li><RenderText block={block.numbered_list_item} /></li> -->
 
-<div class="notion-list">
-  <div class="notion-list-dot">
+<div class="notion-list notion-render">
+  <div class="notion-list-dot notion-render">
     <div
-      class="notion-list-dot-inner"
+      class="notion-list-dot-inner notion-render"
       style={`--pseudoBefore--content: "${number}.";`}
     ></div>
   </div>
-  <div class="notion-list-content">
-    <div class="notion-list-text">
+  <div class="notion-list-content notion-render">
+    <div class="notion-list-text notion-render">
       <RenderText block={block.numbered_list_item} />
     </div>
     {#if block.children}

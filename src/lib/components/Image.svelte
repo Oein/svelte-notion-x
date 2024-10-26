@@ -20,7 +20,7 @@
 </script>
 
 <img
-  class="notion-image"
+  class="notion-image notion-render"
   src={toNotionImageUrl(block.image.file.url, block.id)}
   alt="from notion"
 />

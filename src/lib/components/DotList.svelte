@@ -11,12 +11,12 @@
   };
 </script>
 
-<div class="notion-list">
-  <div class="notion-list-dot">
-    <div class="notion-list-dot-inner"></div>
+<div class="notion-list notion-render">
+  <div class="notion-list-dot notion-render">
+    <div class="notion-list-dot-inner notion-render"></div>
   </div>
-  <div class="notion-list-content">
-    <div class="notion-list-text">
+  <div class="notion-list-content notion-render">
+    <div class="notion-list-text notion-render">
       <RenderText block={block.bulleted_list_item} />
     </div>
     {#if block.children}

@@ -7,9 +7,9 @@
   };
 </script>
 
-<div class="notion-quote-wrp">
-  <div class="notion-quote-border">
-    <div class="notion-quote-content">
+<div class="notion-quote-wrp notion-render">
+  <div class="notion-quote-border notion-render">
+    <div class="notion-quote-content notion-render">
       <RenderText block={block.quote} />
     </div>
   </div>

@@ -1,5 +1,5 @@
-<div class="notion-divider-line">
-  <div role="separator" class="notion-divider-main"></div>
+<div class="notion-divider-line notion-render">
+  <div role="separator" class="notion-divider-main notion-render"></div>
 </div>
 
 <style>

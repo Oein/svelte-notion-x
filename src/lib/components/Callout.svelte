@@ -11,22 +11,22 @@
 
 <!-- <DebugJson name="callout" {block} /> -->
 
-<div class="notion-callout">
-  <div class="notion-callout-icn0">
-    <div class="notion-callout-icn1">
+<div class="notion-callout notion-render">
+  <div class="notion-callout-icn0 notion-render">
+    <div class="notion-callout-icn1 notion-render">
       {#if block.callout.icon.type == "emoji"}
-        <div class="notion-callout-txt0">
-          <div class="notion-callout-txt1">
-            <span role="img" class="notion-callout-txt2">
+        <div class="notion-callout-txt0 notion-render">
+          <div class="notion-callout-txt1 notion-render">
+            <span role="img" class="notion-callout-txt2 notion-render">
               {block.callout.icon.emoji}
             </span>
           </div>
         </div>
       {:else}
         <div>
-          <div class="notion-callout-icn2">
+          <div class="notion-callout-icn2 notion-render">
             <img
-              class="notion-callout-icn"
+              class="notion-callout-icn notion-render"
               src={block.callout.icon.external.url}
               alt="Callout Icon"
             />
@@ -35,10 +35,10 @@
       {/if}
     </div>
   </div>
-  <div class="notion-callout-content">
+  <div class="notion-callout-content notion-render">
     {#if block.callout.rich_text.length > 0}
-      <div class="notion-callout-rich">
-        <div class="notion-callout-rich1">
+      <div class="notion-callout-rich notion-render">
+        <div class="notion-callout-rich1 notion-render">
           <RenderText block={block.callout} />
         </div>
       </div>

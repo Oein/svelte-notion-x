@@ -21,21 +21,21 @@
   const notypecheck = (x: any) => x;
 </script>
 
-<div class="notion-content">
+<div class="notion-content notion-render">
   {#if block.type == "heading_1"}
-    <h2 class="notion-heading-1">
+    <h2 class="notion-heading-1 notion-render">
       <RenderText block={block["heading_1"]} />
     </h2>
   {:else if block.type == "heading_2"}
-    <h3 class="notion-heading-2">
+    <h3 class="notion-heading-2 notion-render">
       <RenderText block={block["heading_2"]} />
     </h3>
   {:else if block.type == "heading_3"}
-    <h4 class="notion-heading-3">
+    <h4 class="notion-heading-3 notion-render">
       <RenderText block={block["heading_3"]} />
     </h4>
   {:else if block.type == "paragraph"}
-    <div class="notion-paragraph">
+    <div class="notion-paragraph notion-render">
       <RenderText block={block["paragraph"]} />
     </div>
   {:else if block.type == "equation"}
@@ -75,5 +75,62 @@
     width: 100%;
     padding: 3px 2px;
     margin: 1px 0;
+  }
+
+  .notion-heading-1 {
+    font-weight: 600;
+    font-size: 1.875em;
+
+    margin-top: calc(var(--notion-default-font-size) * 2);
+    margin-bottom: 4px;
+  }
+
+  .notion-heading-2 {
+    font-weight: 600;
+    font-size: 1.5em;
+
+    margin-top: var(--notion-default-font-size);
+    margin-bottom: 1px;
+  }
+
+  .notion-heading-3 {
+    font-weight: 600;
+    font-size: 1.25em;
+
+    margin-top: var(--notion-default-font-size);
+    margin-bottom: 1px;
+  }
+
+  .notion-heading-1,
+  .notion-heading-2,
+  .notion-heading-3 {
+    max-width: 100%;
+    width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    caret-color: rgb(55, 53, 47);
+    padding: 3px 2px;
+    font-family:
+      ui-sans-serif,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI Variable Display",
+      "Segoe UI",
+      Helvetica,
+      "Apple Color Emoji",
+      Arial,
+      sans-serif,
+      "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    line-height: 1.3;
+  }
+
+  .notion-paragraph {
+    max-width: 100%;
+    width: 100%;
+    white-space: pre-wrap;
+    word-break: break-word;
+    caret-color: rgb(55, 53, 47);
+    padding: 3px 2px;
   }
 </style>

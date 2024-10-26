@@ -24,9 +24,13 @@
 </script>
 
 {#if block.code.language == "mermaid"}
-  <div bind:this={container} class="notion-mermaid-container"></div>
+  <div
+    bind:this={container}
+    class="notion-mermaid-container notion-render"
+  ></div>
 {:else}
   <pre
+    class="notion-render"
     bind:this={preElement}>{@html `<code>${block.code.rich_text[0].text.content}</code>`}</pre>
 {/if}
 

@@ -7,7 +7,7 @@
   };
 </script>
 
-<div class="notion-equation-block">
+<div class="notion-equation-block notion-render">
   <MathMl tex={block.expression} />
 </div>
 

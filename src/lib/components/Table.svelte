@@ -8,18 +8,18 @@
   const notypecheck = (x: any) => x;
 </script>
 
-<table class="notion-table">
+<table class="notion-table notion-render">
   {#each block.children as row, i}
-    <tr>
+    <tr class="notion-render">
       {#each row.table_row.cells as cell, j}
         <td
-          class="notion-table-cell-wrp"
+          class="notion-table-cell-wrp notion-render"
           style={(i == 0 && block.table.has_column_header) ||
           (j == 0 && block.table.has_row_header)
             ? "background-color: #f7f6f3"
             : ""}
         >
-          <div class="notion-table-cell-text">
+          <div class="notion-table-cell-text notion-render">
             <!-- <DebugJson block={cell} name="cell" /> -->
             <RenderText block={notypecheck({ rich_text: cell })} />
           </div>

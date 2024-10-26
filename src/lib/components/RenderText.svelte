@@ -35,7 +35,7 @@
   {:else if text.type == "equation"}
     <MathML tex={text.equation.expression} />
   {:else}
-    <span>{text.plain_text}</span>
+    <span class="notion-render">{text.plain_text}</span>
   {/if}
 {/each}
 

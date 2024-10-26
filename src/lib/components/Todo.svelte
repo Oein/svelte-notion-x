@@ -11,17 +11,23 @@
   };
 </script>
 
-<div class="notion-todo">
-  <div>
+<div class="notion-todo notion-render">
+  <div class="notion-render">
     <input
-      class="notion-todo-checkbox"
+      class="notion-todo-checkbox notion-render"
       type="checkbox"
       checked={block.to_do.checked}
     />
   </div>
-  <div>
+  <div class="notion-render">
     <RenderText block={block.to_do} />
   </div>
 </div>
 
 <!-- <DebugJson {block} name="todo" /> -->
+
+<style>
+  .notion-todo {
+    display: flex;
+  }
+</style>

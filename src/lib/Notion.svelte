@@ -27,7 +27,7 @@
     })();
 </script>
 
-<article class="notion-renderer">
+<article class="notion-renderer notion-render">
   {#each renderData as block}
     <NotionBlock {block} />
   {/each}

@@ -11,20 +11,23 @@
   let open = false;
 </script>
 
-<div class="notion-toggle">
-  <button class="notion-toggle-dot" on:click={() => (open = !open)}>
-    <div class="notion-toggle-inner">
+<div class="notion-toggle notion-render">
+  <button
+    class="notion-toggle-dot notion-render"
+    on:click={() => (open = !open)}
+  >
+    <div class="notion-toggle-inner notion-render">
       <svg
         role="graphics-symbol"
         viewBox="0 0 100 100"
-        class="triangle"
+        class="triangle notion-render"
         style={`width: 0.6875em; height: 0.6875em; display: block; fill: inherit; flex-shrink: 0; transition: transform 200ms ease-out; transform: rotateZ(${open ? "180deg" : "90deg"}); opacity: 1;`}
         ><polygon points="5.9,88.2 50,11.8 94.1,88.2" fill="currentColor"
         ></polygon></svg
       >
     </div>
   </button>
-  <div class="notion-toggle-content">
+  <div class="notion-toggle-content notion-render">
     <RenderText block={block.toggle} />
     {#if block.children && open}
       <Notion blocks={block.children} />
