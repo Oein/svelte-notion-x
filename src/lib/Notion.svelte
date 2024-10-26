@@ -62,8 +62,6 @@
       sans-serif,
       "Segoe UI Emoji",
       "Segoe UI Symbol";
-
-    max-width: 768px;
     margin: 0 auto;
   }
 </style>

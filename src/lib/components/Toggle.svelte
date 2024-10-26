@@ -19,7 +19,8 @@
         viewBox="0 0 100 100"
         class="triangle"
         style={`width: 0.6875em; height: 0.6875em; display: block; fill: inherit; flex-shrink: 0; transition: transform 200ms ease-out; transform: rotateZ(${open ? "180deg" : "90deg"}); opacity: 1;`}
-        ><polygon points="5.9,88.2 50,11.8 94.1,88.2 "></polygon></svg
+        ><polygon points="5.9,88.2 50,11.8 94.1,88.2" fill="currentColor"
+        ></polygon></svg
       >
     </div>
   </button>

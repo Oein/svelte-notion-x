@@ -73,7 +73,7 @@
 <style>
   .notion-content {
     width: 100%;
-    margin-top: 1px;
-    margin-bottom: 1px;
+    padding: 3px 2px;
+    margin: 1px 0;
   }
 </style>
