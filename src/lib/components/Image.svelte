@@ -10,13 +10,6 @@
         ? url
         : `/image/${encodeURIComponent(url)}?table=block&id=${blockId}`
     }`;
-  const alt = (() => {
-    try {
-      return block.image.caption ? block.image.caption[0][0] : "";
-    } catch (e) {
-      return "";
-    }
-  })();
 </script>
 
 <img

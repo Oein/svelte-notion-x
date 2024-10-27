@@ -49,7 +49,7 @@
   {/if}
 {/each}
 
-<details>
+<!-- <details>
   <summary>RAW JSON: RichText</summary>
   <pre class="notion-debug">{JSON.stringify(block, null, 2)}</pre>
-</details>
+</details> -->

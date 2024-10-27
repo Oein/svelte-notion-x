@@ -1,6 +1,6 @@
 {
   "name": "svelte-notion-x",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "devDependencies": {
     "@sveltejs/package": "^2.3.7",
