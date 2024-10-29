@@ -7,6 +7,8 @@
   export let block: {
     [key: string]: any;
   };
+
+  export let customRenderer: { [key: string]: any } = {};
 </script>
 
 <!-- <DebugJson name="callout" {block} /> -->
@@ -44,7 +46,7 @@
       </div>
     {/if}
     {#if block.children}
-      <Notion blocks={block.children} />
+      <Notion blocks={block.children} {customRenderer} />
     {/if}
   </div>
 </div>

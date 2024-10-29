@@ -9,6 +9,8 @@
     };
     children: any[];
   };
+
+  export let customRenderer: { [key: string]: any } = {};
 </script>
 
 <div class="notion-list notion-render">
@@ -20,7 +22,7 @@
       <RenderText block={block.bulleted_list_item} />
     </div>
     {#if block.children}
-      <Notion blocks={block.children} />
+      <Notion blocks={block.children} {customRenderer} />
     {/if}
   </div>
 </div>

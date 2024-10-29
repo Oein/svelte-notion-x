@@ -17,12 +17,19 @@
     type: string;
     [key: string]: any;
   };
+  export let customRenderer: { [key: string]: any } = {};
 
   const notypecheck = (x: any) => x;
 </script>
 
 <div class="notion-content notion-render">
-  {#if block.type == "heading_1"}
+  {#if block.type in customRenderer}
+    <svelte:component
+      this={customRenderer[block.type]}
+      {block}
+      {customRenderer}
+    />
+  {:else if block.type == "heading_1"}
     <h2 class="notion-heading-1 notion-render">
       <RenderText block={block["heading_1"]} />
     </h2>
@@ -49,21 +56,22 @@
   {:else if block.type == "divider"}
     <Divider />
   {:else if block.type == "toggle"}
-    <Toggle {block} />
+    <Toggle {block} {customRenderer} />
   {:else if block.type == "quote"}
     <Quote {block} />
   {:else if block.type == "callout"}
-    <Callout {block} />
+    <Callout {block} {customRenderer} />
   {:else if block.type == "to_do"}
     {#if block.to_do}
       <Todo block={notypecheck(block)} />
     {/if}
   {:else if block.type == "bulleted_list_item"}
-    <DotList block={notypecheck(block)} />
+    <DotList block={notypecheck(block)} {customRenderer} />
   {:else if block.type == "numbered_list_item"}
     <NumList
       block={notypecheck(block)}
       number={block.custom && block.custom.number ? block.custom.number : 1}
+      {customRenderer}
     />
   {:else}
     <DebugJson {block} name={`Unhandled / ${block.type}`} />

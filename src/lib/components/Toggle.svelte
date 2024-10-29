@@ -9,6 +9,7 @@
   };
 
   let open = false;
+  export let customRenderer: { [key: string]: any } = {};
 </script>
 
 <div class="notion-toggle notion-render">
@@ -30,7 +31,7 @@
   <div class="notion-toggle-content notion-render">
     <RenderText block={block.toggle} />
     {#if block.children && open}
-      <Notion blocks={block.children} />
+      <Notion blocks={block.children} {customRenderer} />
     {/if}
   </div>
 </div>

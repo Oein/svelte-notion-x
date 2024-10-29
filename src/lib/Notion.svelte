@@ -25,11 +25,13 @@
         } else propsWK.nli = 0;
       }
     })();
+
+  export let customRenderer: { [key: string]: any } = {};
 </script>
 
 <article class="notion-renderer notion-render">
   {#each renderData as block}
-    <NotionBlock {block} />
+    <NotionBlock {customRenderer} {block} />
   {/each}
 </article>
 

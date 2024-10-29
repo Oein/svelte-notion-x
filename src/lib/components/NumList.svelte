@@ -11,6 +11,8 @@
   };
 
   export let number: number = 1;
+
+  export let customRenderer: { [key: string]: any } = {};
 </script>
 
 <!-- <li><RenderText block={block.numbered_list_item} /></li> -->
@@ -27,7 +29,7 @@
       <RenderText block={block.numbered_list_item} />
     </div>
     {#if block.children}
-      <Notion blocks={block.children} />
+      <Notion blocks={block.children} {customRenderer} />
     {/if}
   </div>
 </div>
